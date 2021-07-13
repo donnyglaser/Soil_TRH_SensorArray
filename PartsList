@@ -1,0 +1,25 @@
+Necessary Hardware
+(or similar if hardware is obsolete)
+
+Electronic Hardware:
+Adafruit pro trinket 3V (digikey #1528-1040-ND)
+Adafruit microSD card reader breakout (digikey #1528-1462-ND)
+MicroSD card 
+ModuleFly RTC breakout (amazon #zs042)
+Photoresistor (digikey #1528-2141-ND)
+Honeywell temperature & relative humidity sensor (digikey #HIH7120-021-001CT-ND)
+Texas Instruments voltage regulator 3.3V (digikey #LM2936MP-3.3/NOPBCT-ND)
+3.7V 3000mAh lithium polymer ion battery (amazon #YDL2018032931)
+0.22 µF capacitor
+2.2 kΩ resistor
+CAT5 cable
+4" x6" prototyping pcb board
+
+Other Hardware:
+1/2" PVC tibing
+1/2" PCV coupler
+PVC pipe cement
+PVC end cap
+JB Weld plastic weld
+Tyvek material 43 gsm (grams per square meter)
+plastic enclosure 3" x3" x1.5"
