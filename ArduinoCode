@@ -11,15 +11,11 @@
 #include "SPI.h"
 #include <DS1307RTC.h>
 
-#define TIME_HEADER  "T"   // Header tag for serial time sync message
-#define TIME_REQUEST  7    // ASCII bell character requests a time sync message
-
 //Creates each sensor address; place in order from top to bottom of array. Ensure numSensors equals array size of sensors[]
 HIH61Donny sensors[] = {HIH61Donny(0x22),HIH61Donny(0x23),HIH61Donny(0x24),HIH61Donny(0x25),HIH61Donny(0x26),HIH61Donny(0x27)};
 
 double values[2]; //Creates array for placement of sensor data (humidity & temperature)
 int counter = 0;
-//bool timeSync = false;
 String fileName = "";
 bool skip = true;
 String output;
@@ -99,10 +95,10 @@ for(int i=0; i<20; i++) { //blink LED 20 times to indicate setup worked correctl
   Serial.println("SETUP OK");
 }
 Serial.end(9600);
-
 }
-void loop(){
 
+// Main loop that measures and saves the T, RH, and light data
+void loop(){
   digitalWrite(6, HIGH);
   delay(500);
   setSyncProvider(RTC.get);  //set function to call when sync required
@@ -126,6 +122,7 @@ void loop(){
   }
 }
 
+// Support functions
 void readSensor (){
   saveData(timeStamp(), true);
   saveData(", " + String(counter), true);
